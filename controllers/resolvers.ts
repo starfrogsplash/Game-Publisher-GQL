@@ -1,10 +1,11 @@
 import { publisherModel } from '../models/publisher'
 import { gameModel } from '../models/game'
+import { GraphQLResolveInfo } from 'graphql';
+
 
 const resolvers = {
     Query: {
-         //@ts-ignorets-ignore
-        findGame: async (parent, args, context, info) => {
+        findGame: async (parent: undefined, args: Record<string, any>, context: any, info: GraphQLResolveInfo) => {
             const { title, publisherId } = args
             const result = await gameModel.findOne({title} )
             return JSON.parse(JSON.stringify(result));
