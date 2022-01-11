@@ -1,0 +1,24 @@
+type Publisher {
+  companyName: String!
+  firstParty: Boolean!
+  website: String!
+}
+
+type Game {
+  title: String!
+  publisher: Publisher!
+}
+
+type Query {
+  findGame(title: String!): Game
+}
+
+type Mutation {
+  createPublisher(
+    companyName: String!
+    firstParty: Boolean
+    website: String!
+  ): Publisher
+  
+  createGame(title: String!, publisherId: String!): Game
+}

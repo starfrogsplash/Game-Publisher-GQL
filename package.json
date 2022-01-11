@@ -1,0 +1,37 @@
+{
+  "name": "graphql-mongo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.ts",
+    "compile": "tsc",
+    "test": "jest"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.graphql$": "graphql-import-node/jest"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "@types/mongoose": "^5.11.97",
+    "apollo-server": "^3.6.1",
+    "apollo-server-core": "^3.6.1",
+    "apollo-server-express": "^3.6.1",
+    "graphql": "^16.2.0",
+    "graphql-import-node": "^0.0.4",
+    "jest": "^27.4.7",
+    "mongoose": "^6.1.5",
+    "nodemon": "^2.0.15",
+    "normalize-mongoose": "^1.0.0",
+    "ts-jest": "^27.1.2",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
+  }
+}
